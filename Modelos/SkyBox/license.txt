@@ -1,0 +1,11 @@
+Model Information:
+* title:	Star light Ball
+* source:	https://sketchfab.com/3d-models/star-light-ball-5ff4bb78de0f4f72afbc9e202d9f9b4b
+* author:	TRYFIELD (https://sketchfab.com/tryfield)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Star light Ball" (https://sketchfab.com/3d-models/star-light-ball-5ff4bb78de0f4f72afbc9e202d9f9b4b) by TRYFIELD (https://sketchfab.com/tryfield) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
