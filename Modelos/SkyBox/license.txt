@@ -1,11 +1,11 @@
 Model Information:
-* title:	Star light Ball
-* source:	https://sketchfab.com/3d-models/star-light-ball-5ff4bb78de0f4f72afbc9e202d9f9b4b
-* author:	TRYFIELD (https://sketchfab.com/tryfield)
+* title:	skybox of constellations
+* source:	https://sketchfab.com/3d-models/skybox-of-constellations-398b3166a9dc4854b5343d7f477bb7ed
+* author:	tiunov.se (https://sketchfab.com/tiunov.se)
 
 Model License:
 * license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 * requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Star light Ball" (https://sketchfab.com/3d-models/star-light-ball-5ff4bb78de0f4f72afbc9e202d9f9b4b) by TRYFIELD (https://sketchfab.com/tryfield) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "skybox of constellations" (https://sketchfab.com/3d-models/skybox-of-constellations-398b3166a9dc4854b5343d7f477bb7ed) by tiunov.se (https://sketchfab.com/tiunov.se) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

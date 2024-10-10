@@ -1,3 +1,4 @@
+
 import * as THREE from 'three';
 import { FirstPersonControls } from 'three/addons/controls/FirstPersonControls.js';
 import Stats from 'three/addons/libs/stats.module.js';
@@ -35,7 +36,7 @@ directionalLight.castShadow = true;
 scene.add(directionalLight);
 
 // Configurar sombras
-directionalLight.shadow.mapSize.width = 1024; // Valor recomendado
+directionalLight.shadow.mapSize.width = 1024;
 directionalLight.shadow.mapSize.height = 1024;
 directionalLight.shadow.camera.near = 0.5;
 directionalLight.shadow.camera.far = 50;
@@ -82,7 +83,7 @@ function animate() {
   requestAnimationFrame(animate);
   const delta = clock.getDelta();
   controls.update(delta);
-  composer.render(); // Usar composer en lugar de renderer
+  composer.render(); 
 }
 
 animate();

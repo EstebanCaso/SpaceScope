@@ -1,3 +1,4 @@
+
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 // Función para cargar modelos y añadirlos al OutlinePass
@@ -25,7 +26,7 @@ export function loadModel(scene, outlinePass) {
     });
   };
 
- 
+ //cargarModel('Modelos/carpeta/', 'nombre', [x,z,y]. [escala]);
   cargarModelo('Modelos/sputnik/', 'Sputnik', [0, 0, -1000], [5, 5, 5]);
   cargarModelo('Modelos/ISS/', 'ISS', [1000, 300, 0], [2, 2, 2]);
   cargarModelo('Modelos/hubble/', 'Hubble', [-1000, -150, 0], [3, 3, 3]);
@@ -42,11 +43,11 @@ export function loadSky(scene) {
     mesh.traverse((child) => {
       if (child.isMesh) {
         child.castShadow = true;
-        child.receiveShadow = true;
+        child.receiveShadow = false;
       }
     });
-    mesh.position.set(-4500, -9000, 4000);
-    mesh.scale.set(200, 200, 200);
+    mesh.position.set(0, 0, 0);
+    mesh.scale.set(4000, 4000, 4000);
     scene.add(mesh);
     console.log('SkyBox cargado.');
   }, undefined, (error) => {
@@ -63,7 +64,7 @@ export function loadSky(scene) {
         child.receiveShadow = true;
       }
     });
-    mesh.position.set(5200, 800, 5200);
+    mesh.position.set(4200, 800, 1000);
     mesh.scale.set(10, 10, 10);
     scene.add(mesh);
     console.log('Sun cargado.');
