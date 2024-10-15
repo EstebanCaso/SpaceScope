@@ -1,11 +1,11 @@
 Model Information:
-* title:	Satélite
-* source:	https://sketchfab.com/3d-models/satelite-6c00e51d44324561b61b59f8100623ee
-* author:	Jéssica Magno (https://sketchfab.com/jessica_magno)
+* title:	Satellite
+* source:	https://sketchfab.com/3d-models/satellite-d232fe608c874009bad9613c8093a972
+* author:	Daan van Leeuwen (https://sketchfab.com/superwortel)
 
 Model License:
-* license type:	CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)
-* requirements:	Author must be credited. No commercial use. Modified versions can not be distributed.
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Satélite" (https://sketchfab.com/3d-models/satelite-6c00e51d44324561b61b59f8100623ee) by Jéssica Magno (https://sketchfab.com/jessica_magno) licensed under CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)
+This work is based on "Satellite" (https://sketchfab.com/3d-models/satellite-d232fe608c874009bad9613c8093a972) by Daan van Leeuwen (https://sketchfab.com/superwortel) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

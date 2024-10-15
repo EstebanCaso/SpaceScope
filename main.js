@@ -1,4 +1,3 @@
-
 import * as THREE from 'three';
 import { FirstPersonControls } from 'three/addons/controls/FirstPersonControls.js';
 import Stats from 'three/addons/libs/stats.module.js';
@@ -21,40 +20,30 @@ document.body.appendChild(renderer.domElement);
 
 const scene = new THREE.Scene();
 
-const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000000);
-camera.position.set(1500, 0, 400);
+const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 3000000);
+camera.position.set(30000, 0, 6000);
 
 const clock = new THREE.Clock();
 
-// Añadir luces
-const ambientLight = new THREE.AmbientLight(0xFFFFFF , 3); 
+// Ajustar luces
+const ambientLight = new THREE.AmbientLight(0xFFFFFF , 0.5); // Baja la intensidad de la luz ambiental
 scene.add(ambientLight);
-
-const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-directionalLight.position.set(5, 10, 7.5);
-directionalLight.castShadow = true;
-scene.add(directionalLight);
-
-// Configurar sombras
-directionalLight.shadow.mapSize.width = 1024;
-directionalLight.shadow.mapSize.height = 1024;
-directionalLight.shadow.camera.near = 0.5;
-directionalLight.shadow.camera.far = 50;
 
 // Controles
 const controls = new FirstPersonControls(camera, renderer.domElement);
-controls.movementSpeed = 50;
-controls.lookSpeed = 0.15;
+controls.movementSpeed = 2300;
+controls.lookSpeed = 0.20;
 
 // Configuración de EffectComposer
 const composer = new EffectComposer(renderer);
 const renderPass = new RenderPass(scene, camera);
+renderPass.clear = true;  // Asegurarse de que el frame buffer se limpie correctamente
 composer.addPass(renderPass);
 
 const outlinePass = new OutlinePass(new THREE.Vector2(window.innerWidth, window.innerHeight), scene, camera);
-outlinePass.edgeStrength = 2.0;
+outlinePass.edgeStrength = 3.0;
 outlinePass.edgeGlow = 1.0;
-outlinePass.edgeThickness = 1.0;
+outlinePass.edgeThickness = 2.0;
 outlinePass.pulsePeriod = 0;
 outlinePass.visibleEdgeColor.set('#ffffff');
 outlinePass.hiddenEdgeColor.set('#190a05');
@@ -67,6 +56,7 @@ composer.addPass(fxaaPass);
 // Cargar modelos
 loadModel(scene, outlinePass);
 loadSky(scene);
+
 
 // Manejar redimensionamiento de la ventana
 window.addEventListener('resize', () => {

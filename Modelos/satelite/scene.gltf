@@ -3,24 +3,24 @@
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 512,
+      "count": 7160,
       "max": [
-        4.172609329223633,
-        1.4648957252502441,
-        13.67340087890625
+        8.552499771118164,
+        3.6029999256134033,
+        3.546380043029785
       ],
       "min": [
-        -4.165558338165283,
-        -1.4648957252502441,
-        -13.66386890411377
+        -8.578840255737305,
+        -3.64424991607666,
+        -4.299650192260742
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
-      "byteOffset": 6144,
+      "byteOffset": 85920,
       "componentType": 5126,
-      "count": 512,
+      "count": 7160,
       "max": [
         1.0,
         1.0,
@@ -34,32 +34,50 @@
       "type": "VEC3"
     },
     {
-      "bufferView": 1,
+      "bufferView": 3,
       "componentType": 5126,
-      "count": 512,
+      "count": 7160,
       "max": [
-        0.9947477579116821,
-        0.7254155874252319
+        1.0,
+        1.0,
+        1.0,
+        1.0
       ],
       "min": [
-        0.2423090785741806,
-        0.006093338131904602
+        -1.0,
+        -1.0,
+        -1.0,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 7160,
+      "max": [
+        0.993116021156311,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0
       ],
       "type": "VEC2"
     },
     {
       "bufferView": 0,
       "componentType": 5125,
-      "count": 768,
+      "count": 15714,
       "type": "SCALAR"
     }
   ],
   "asset": {
     "extras": {
-      "author": "Jéssica Magno (https://sketchfab.com/jessica_magno)",
-      "license": "CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)",
-      "source": "https://sketchfab.com/3d-models/satelite-6c00e51d44324561b61b59f8100623ee",
-      "title": "Satélite"
+      "author": "Daan van Leeuwen (https://sketchfab.com/superwortel)",
+      "license": "CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)",
+      "source": "https://sketchfab.com/3d-models/satellite-d232fe608c874009bad9613c8093a972",
+      "title": "Satellite"
     },
     "generator": "Sketchfab-12.66.0",
     "version": "2.0"
@@ -67,48 +85,81 @@
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 3072,
+      "byteLength": 62856,
       "name": "floatBufferViews",
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteLength": 4096,
-      "byteOffset": 3072,
+      "byteLength": 57280,
+      "byteOffset": 62856,
       "byteStride": 8,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 12288,
-      "byteOffset": 7168,
+      "byteLength": 171840,
+      "byteOffset": 120136,
       "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 114560,
+      "byteOffset": 291976,
+      "byteStride": 16,
       "name": "floatBufferViews",
       "target": 34962
     }
   ],
   "buffers": [
     {
-      "byteLength": 19456,
+      "byteLength": 406536,
       "uri": "scene.bin"
     }
   ],
   "images": [
     {
-      "uri": "textures/Material_baseColor.png"
+      "uri": "textures/lambert1_baseColor.png"
+    },
+    {
+      "uri": "textures/lambert1_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/lambert1_emissive.jpeg"
+    },
+    {
+      "uri": "textures/lambert1_normal.png"
     }
   ],
   "materials": [
     {
+      "alphaMode": "BLEND",
       "doubleSided": true,
-      "name": "Material",
+      "emissiveFactor": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissiveTexture": {
+        "index": 2
+      },
+      "name": "lambert1",
+      "normalTexture": {
+        "index": 3
+      },
+      "occlusionTexture": {
+        "index": 1
+      },
       "pbrMetallicRoughness": {
         "baseColorTexture": {
           "index": 0
         },
-        "metallicFactor": 0.5,
-        "roughnessFactor": 0.3
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
       }
     }
   ],
@@ -120,9 +171,10 @@
           "attributes": {
             "NORMAL": 1,
             "POSITION": 0,
-            "TEXCOORD_0": 2
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
           },
-          "indices": 3,
+          "indices": 4,
           "material": 0,
           "mode": 4
         }
@@ -158,41 +210,11 @@
       "children": [
         2
       ],
-      "name": "root"
-    },
-    {
-      "children": [
-        3
-      ],
-      "matrix": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        2.220446049250313e-16,
-        1.0,
-        0.0,
-        0.0,
-        -1.0,
-        2.220446049250313e-16,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ],
-      "name": "GLTF_SceneRootNode"
-    },
-    {
-      "children": [
-        4
-      ],
-      "name": "satelite_0"
+      "name": "SatelliteSubstancePainter.obj.cleaner.materialmerger.gles"
     },
     {
       "mesh": 0,
-      "name": "Object_4"
+      "name": "Object_2"
     }
   ],
   "samplers": [
@@ -216,6 +238,18 @@
     {
       "sampler": 0,
       "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
     }
   ]
 }
