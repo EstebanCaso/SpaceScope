@@ -8,6 +8,8 @@ import { OutlinePass } from 'three/addons/postprocessing/OutlinePass.js';
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { FXAAShader } from 'three/addons/shaders/FXAAShader.js';
 
+
+
 // Inicialización básica
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -31,7 +33,7 @@ scene.add(ambientLight);
 
 // Controles
 const controls = new FirstPersonControls(camera, renderer.domElement);
-controls.movementSpeed = 2300;
+controls.movementSpeed = 1800;
 controls.lookSpeed = 0.20;
 
 // Configuración de EffectComposer
@@ -71,9 +73,13 @@ window.addEventListener('resize', () => {
 // Ciclo de animación
 function animate() {
   requestAnimationFrame(animate);
-  const delta = clock.getDelta();
+ const delta = clock.getDelta();
   controls.update(delta);
   composer.render(); 
 }
 
+
+
 animate();
+  
+

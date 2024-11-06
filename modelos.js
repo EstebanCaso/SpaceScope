@@ -96,9 +96,9 @@ export function loadSky(scene) {
 
       // Agregar luz direccional que simule la luz solar
       const sunLight = new THREE.DirectionalLight(0xffffff, 10); // Luz blanca con intensidad
-      sunLight.position.copy(mesh.position); // Posicionar la luz donde está el sol
-      sunLight.castShadow = true; // Habilitar sombras
-      sunLight.shadow.mapSize.width = 1024; // Tamaño del mapa de sombras
+      sunLight.position.copy(mesh.position); 
+      sunLight.castShadow = true; 
+      sunLight.shadow.mapSize.width = 1024; 
       sunLight.shadow.mapSize.height = 1024;
       sunLight.shadow.camera.near = 0.5;
       sunLight.shadow.camera.far = 100000;
@@ -124,7 +124,7 @@ loader.load(
         child.receiveShadow = true;
         child.material = new THREE.MeshStandardMaterial({
           emissive: new THREE.Color(0xaaaaaa), // Cambiar a un color más brillante
-          emissiveIntensity: 2, // Aumentar la intensidad de la emisión
+          emissiveIntensity: 1, // Aumentar la intensidad de la emisión
         });
       }
     });
@@ -134,9 +134,9 @@ loader.load(
 
     // Agregar luz direccional que simule la luz lunar
     const moonLight = new THREE.DirectionalLight(0xffffff, 2); // Luz blanca con intensidad
-    moonLight.position.copy(mesh.position); // Posicionar la luz donde está la luna
-    moonLight.castShadow = true; // Habilitar sombras
-    moonLight.shadow.mapSize.width = 1024; // Tamaño del mapa de sombras
+    moonLight.position.copy(mesh.position); 
+    moonLight.castShadow = true;
+    moonLight.shadow.mapSize.width = 1024; 
     moonLight.shadow.mapSize.height = 1024;
     moonLight.shadow.camera.near = 0.5;
     moonLight.shadow.camera.far = 100000;
