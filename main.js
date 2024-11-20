@@ -113,18 +113,23 @@ function onClick(event) {
 
 
 function animateCameraToObject(object) {
-  const targetPosition = object.getWorldPosition(new THREE.Vector3());
+  if (object) { // Check if the object exists
+    const targetPosition = object.getWorldPosition(new THREE.Vector3());
+    gsap.to(camera.position, {
+      duration: 2,  // Duración de la animación en segundos
+      x: targetPosition.x,
+      y: targetPosition.y,
+      z: targetPosition.z + 400, // Ajusta la distancia final
+      onUpdate: () => {
+        camera.lookAt(targetPosition); // La cámara sigue mirando al objeto
+        
+      }
+    });
+  }else {
+    console.error("Object is null. Cannot animate camera.");
+  }
   
-  gsap.to(camera.position, {
-    duration: 2,  // Duración de la animación en segundos
-    x: targetPosition.x,
-    y: targetPosition.y,
-    z: targetPosition.z + 400, // Ajusta la distancia final
-    onUpdate: () => {
-      camera.lookAt(targetPosition); // La cámara sigue mirando al objeto
-      
-    }
-  });
+  
 }
 function mostrarMenuInformacion(info) {
   const menu = document.createElement('div');
@@ -175,10 +180,11 @@ function mostrarMenuInformacion(info) {
   // Cerrar el menú al hacer clic en el botón "Cerrar"
   closeButton.addEventListener('click', () => {
     document.body.removeChild(menu);
+   
   });
 }
 
-function setupSatelliteMenu() {
+function setupSatelliteMenu(listaSatelites) {
   // Crear el contenedor del menú
   const sideMenu = document.createElement('div');
   sideMenu.style.position = 'absolute';
@@ -199,7 +205,7 @@ function setupSatelliteMenu() {
 
   // Botón para mostrar/ocultar el menú
   const toggleButton = document.createElement('button');
-  toggleButton.innerText = '📋 Lista de Satélites';
+  toggleButton.innerText = 'Información Lista de Satélites';
   toggleButton.style.position = 'absolute';
   toggleButton.style.top = '10px';
   toggleButton.style.left = '20px';
@@ -216,6 +222,12 @@ function setupSatelliteMenu() {
   // Abrir/Cerrar menú
   toggleButton.addEventListener('click', () => {
     sideMenu.style.display = sideMenu.style.display === 'none' ? 'block' : 'none';
+    if(controls.enabled == false){
+      controls.enabled = true;
+    }else{
+      controls.enabled = false;
+    }
+    
   });
 
   // Poblar el menú con los satélites
@@ -244,19 +256,19 @@ function setupSatelliteMenu() {
     // Función al hacer clic en un satélite
     button.addEventListener('click', () => {
       const satelite = scene.getObjectByName(sat.nombre); // Supongamos que el modelo tiene el nombre del satélite
-      if (satelite) {
-        animateCameraToObject(satelite);
+      console.warn('nombre del satelite:', sat.nombre);
+      
+        
         const info = satelliteInfo[sat.nombre];
+        
         if (info) {
           mostrarMenuInformacion(info);
         } else {
           console.warn('Información del satélite no encontrada:', sat.nombre);
         }
-      } else {
-        console.warn('Modelo del satélite no encontrado en la escena:', sat.nombre);
-      }
+       
     });
-
+    
     sideMenu.appendChild(button);
   });
 }
@@ -264,7 +276,7 @@ function setupSatelliteMenu() {
 // Cargar modelos
 loadModel(scene, outlinePass)
 loadSky(scene);
-setupSatelliteMenu();
+setupSatelliteMenu(listaSatelites);
 
 // Manejar redimensionamiento de la ventana
 window.addEventListener('resize', () => {

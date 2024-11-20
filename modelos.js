@@ -1,4 +1,5 @@
 
+
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
@@ -53,7 +54,7 @@ export function loadModel(scene, outlinePass) {
   cargarModelo('Modelos/voyager/', 'Voyager 2', [0, 6000, 40000], [25, 25, 25]);
   cargarModelo('Modelos/starlink/', 'Starlink', [5000, -1000, -1000], [20, 20, 20]);
   cargarModelo('Modelos/gps/', 'GPS Satellite', [3000, 3000, 5000], [20, 20, 20]);
-  cargarModelo('Modelos/chandra/', 'Chandra X-ray Observatory', [-15000, -6500, 4000], [20, 20, 20]);
+  cargarModelo('Modelos/chandra/', 'Chandra X-ray Observatory', [-2000, 6500, 20000], [20, 20, 20]);
   cargarModelo('Modelos/spitzer/', 'Spitzer Space Telescope', [20000, -4000, 1500], [.5, .5, .5]);
   cargarModelo('Modelos/webb/', 'James Webb Telescope', [-50000, -3000, 1800], [24, 24, 24]);
   cargarModelo('Modelos/inmarsat/', 'Inmarsat', [10000, 6000, -2000], [27, 27, 27]);
