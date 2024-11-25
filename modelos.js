@@ -1,5 +1,3 @@
-
-
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
@@ -7,7 +5,6 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 export function loadModel(scene, outlinePass) {
   const loader = new GLTFLoader();
   
- 
   const cargarModelo = (ruta, nombre, posicion, escala) => {
     loader.setPath(ruta);
     loader.load(
