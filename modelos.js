@@ -1,13 +1,12 @@
 
 
-import * as THREE from 'three';
+import * as THREE from './node_modules/three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 // Función para cargar modelos y añadirlos al OutlinePass
 export function loadModel(scene, outlinePass) {
   const loader = new GLTFLoader();
   
- 
   const cargarModelo = (ruta, nombre, posicion, escala) => {
     loader.setPath(ruta);
     loader.load(

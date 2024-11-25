@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from './node_modules/three';
 import { FirstPersonControls } from 'three/addons/controls/FirstPersonControls.js';
 import { loadModel, loadSky } from './modelos.js'; 
 import { satelliteInfo } from './modelos.js';
