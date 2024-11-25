@@ -1,5 +1,5 @@
 import { defineConfig } from "vite"
-import * as THREE from 'three';
+import react from "@vitejs/plugin-react"
 
 export default defineConfig({
     base: "/SpaceScope/",
